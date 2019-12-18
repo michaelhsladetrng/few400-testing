@@ -43,11 +43,16 @@ interface ResponseListItem {
 }
 
 /*
+
 GET /books
+
 Content-Type: application/json
+
 {
+
   books: [
     { id: '1', title: 'title', author: 'smith', yearPublished: 2017 }
   ]
+
 }
 */

@@ -1,7 +1,8 @@
-<input type=button"
+<input type="button"
        data-books-load
        value="Load Books"
        (click)="load()">
+
 
 <ol>
   <li *ngFor="let book of books$ | async; let i = index">

@@ -9,6 +9,7 @@ const routes: Routes = [{
   path: 'shopping',
   component: ShoppingListComponent
 },
+
 {
   path: 'basic',
   component: SuperBasicComponent
@@ -16,7 +17,8 @@ const routes: Routes = [{
 {
   path: 'books',
   component: BooksComponent
-}];
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

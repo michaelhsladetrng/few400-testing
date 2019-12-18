@@ -20,11 +20,12 @@ export const reducers = {
 export const _selectBookBranch = (state: Appstate) => state.books;
 export const _selectCounterBranch = (state: Appstate) => state.counter;
 // 3. Helpers
+
+// 4. For components
 export const { selectAll }
   = fromBooks.adapter.getSelectors(_selectBookBranch);
 
 
-// 4. For components
 export const selectCurrentCount = createSelector(
   _selectCounterBranch,
   b => b.current

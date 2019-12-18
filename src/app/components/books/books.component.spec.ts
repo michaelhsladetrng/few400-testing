@@ -12,7 +12,6 @@ describe('BooksComponent', () => {
   let mockStore: MockStore<Appstate>;
   let mockBooksSelector: MemoizedSelector<Appstate, BookEntity[]>;
 
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [BooksComponent],
@@ -25,6 +24,7 @@ describe('BooksComponent', () => {
     fixture = TestBed.createComponent(BooksComponent);
     component = fixture.componentInstance;
     mockStore = TestBed.get(Store);
+
     mockBooksSelector = mockStore.overrideSelector(selectBooksArray, [{ id: '99', title: 'a', author: 'b' }]);
     fixture.detectChanges();
   });
@@ -39,13 +39,13 @@ describe('BooksComponent', () => {
       expect(books).toEqual([{ id: '99', title: 'a', author: 'b' }]);
     });
   });
+  it('shoud dispatch the action on load', () => {
 
-  it('should dispatch the action on load', () => {
     const action = loadBookData();
 
     spyOn(mockStore, 'dispatch').and.callThrough();
     component.load();
+    // mockStore.dispatch.calls.first().args[0]
     expect((mockStore.dispatch as any).calls.first().args[0].type).toBe(action.type);
   });
-
 });

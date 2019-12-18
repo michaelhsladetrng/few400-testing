@@ -14,9 +14,9 @@ import { reducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { BookEffects } from './effects/book.effects';
 import { BooksComponent } from './components/books/books.component';
-
+import { BooksDataService } from './services/books-data.service';
 const serviceToUse = new DefaultsService();
-serviceToUse._default = 'PIZZA IS BEST!';
+serviceToUse._default = 'PIZZA IS BEST LOL!';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ serviceToUse._default = 'PIZZA IS BEST!';
   ],
   providers: [{ provide: DefaultsService, useValue: serviceToUse },
     DataService,
+    BooksDataService,
     EnvironmentService
   ],
   bootstrap: [AppComponent]
