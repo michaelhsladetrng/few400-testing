@@ -6,6 +6,7 @@ export class DataService {
 
   private data$: Observable<string[]> = of(['Bread', 'Milk', 'Cheese']);
 
+
   getShoppingList() {
     return this.data$;
   }

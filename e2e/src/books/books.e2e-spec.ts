@@ -1,10 +1,10 @@
 import { BooksComponentPage } from './books.po';
 
-describe('the books componet', () => {
+describe('the books component', () => {
   let page: BooksComponentPage;
 
   beforeEach(() => {
-    page = new BooksComponentPage();
+    page = new BooksComponentPage;
   });
   it('can load the list', () => {
     page.navigateTo();

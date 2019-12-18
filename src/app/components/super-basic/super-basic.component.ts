@@ -4,11 +4,11 @@ import { DefaultsService } from './defaults.service';
 @Component({
   selector: 'app-super-basic',
   templateUrl: './super-basic.component.html',
-  styleUrls: ['./super-basic.component.scss']
+  styleUrls: ['./super-basic.component.css']
 })
 export class SuperBasicComponent implements OnInit {
 
-  word = 'Tacos';
+  word: string;
   constructor(private service: DefaultsService) { }
 
   ngOnInit() {
@@ -18,4 +18,5 @@ export class SuperBasicComponent implements OnInit {
   makeUpper() {
     this.word = this.word.toUpperCase();
   }
+
 }

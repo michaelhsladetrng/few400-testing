@@ -5,6 +5,7 @@ import { By } from '@angular/platform-browser';
 import { click, ButtonClickEvents } from 'src/app/utils/testing';
 import { DefaultsService } from './defaults.service';
 
+
 describe('using the component', () => {
   let component: SuperBasicComponent;
   let fixture: ComponentFixture<SuperBasicComponent>;
@@ -13,17 +14,17 @@ describe('using the component', () => {
   let elH1: HTMLElement;
   let deBtn: DebugElement;
   let elBtn: HTMLInputElement;
-  // let fakeService: DefaultsService;
   let fakeService: any;
 
   beforeEach(() => {
 
     fakeService = {
-      // _default: '',
+
       getDefault() {
         return 'Tacos';
       }
     };
+
 
     TestBed.configureTestingModule({
       declarations: [SuperBasicComponent],
@@ -55,4 +56,5 @@ describe('using the component', () => {
     fixture.detectChanges();
     expect(elH1.innerText).toBe('TACOS');
   });
+
 });
