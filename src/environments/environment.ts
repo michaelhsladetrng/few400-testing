@@ -6,7 +6,7 @@ import { Environment } from './models';
 
 export const environment: Environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/'
+  apiUrl: 'http://localhost:3000'
 };
 
 /*
